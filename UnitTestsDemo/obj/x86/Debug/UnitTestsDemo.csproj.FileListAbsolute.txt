@@ -1,0 +1,10 @@
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.dll
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.pdb
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\Ninject.dll
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\nunit.framework.dll
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\Ninject.pdb
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\Ninject.xml
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\nunit.framework.xml
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\obj\x86\Debug\UnitTestsDemo.dll
+D:\projects\demo\UnitTestsDemo\UnitTestsDemo\obj\x86\Debug\UnitTestsDemo.pdb
