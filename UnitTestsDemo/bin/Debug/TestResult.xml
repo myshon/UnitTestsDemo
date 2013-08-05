@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-03-01" time="14:10:17">
-  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.5466" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\projects\lgbs\Rector\Libs\NUnit-2.6.2\bin" machine-name="S-MALINOWSKI" user="smalinowski" user-domain="LGBSPL" />
+<test-results name="D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.dll" total="0" errors="0" failures="0" not-run="1" inconclusive="0" ignored="1" skipped="0" invalid="0" date="2013-08-05" time="13:47:36">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.5472" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\projects\lgbs\Rector\Libs\NUnit-2.6.2\bin" machine-name="S-MALINOWSKI" user="smalinowski" user-domain="LGBSPL" />
   <culture-info current-culture="pl-PL" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.dll" executed="True" result="Success" success="True" time="0.040" asserts="0">
+  <test-suite type="Assembly" name="D:\projects\demo\UnitTestsDemo\UnitTestsDemo\bin\Debug\UnitTestsDemo.dll" executed="True" result="Inconclusive" success="False" time="0.006" asserts="0">
     <results>
-      <test-suite type="Namespace" name="UnitTestsDemo" executed="True" result="Success" success="True" time="0.030" asserts="0">
+      <test-suite type="Namespace" name="UnitTestsDemo" executed="True" result="Inconclusive" success="False" time="0.006" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="AccountTests" executed="True" result="Success" success="True" time="0.029" asserts="0">
+          <test-suite type="TestFixture" name="AccountTests" executed="True" result="Inconclusive" success="False" time="0.004" asserts="0">
             <results>
-              <test-case name="UnitTestsDemo.AccountTests.TransferFunds_WhenHaveFunds_DoTransfer" executed="True" result="Success" success="True" time="0.020" asserts="2" />
+              <test-case name="UnitTestsDemo.AccountTests.Deposit_PositiveValue_ShouldAddToBalance" executed="False" result="Ignored">
+                <reason>
+                  <message><![CDATA[]]></message>
+                </reason>
+              </test-case>
             </results>
           </test-suite>
         </results>

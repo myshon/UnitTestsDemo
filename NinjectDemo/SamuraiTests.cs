@@ -13,6 +13,7 @@ namespace NinjectDemo
     public class SamuraiTests
     {
         private IKernel Kernel;
+
         public SamuraiTests()
         {
 
@@ -24,6 +25,7 @@ namespace NinjectDemo
             // Uruchamia się przed każdym testem
             // Inicjalizacja Ninjecta, Sesji itp.
             Kernel = new StandardKernel();
+
         }
 
         [TearDown]
@@ -32,7 +34,7 @@ namespace NinjectDemo
             // Uruchamia się po każdym teście
             // Dispose, zamykanie sesji itp.
             Kernel.Dispose();
-            
+
         }
 
 
@@ -41,7 +43,7 @@ namespace NinjectDemo
         {
             var weapon = new Katana();
             var loger = new FakeLogger();
-            Samurai samurai = new Samurai(weapon, loger);
+            Samurai samurai = new Samurai(weapon, loger, helmet: new Helmet());
 
             var damage = samurai.Hit();
 
@@ -51,8 +53,10 @@ namespace NinjectDemo
         [Test]
         public void Hit_WithKatana_Damage7()
         {
-            Kernel.Bind<IWeapon>().To<Katana>().Named("Katama1");
+            Kernel = new StandardKernel();
+            Kernel.Bind<IWeapon>().To<Katana>();
             Kernel.Bind<ILogger>().To<FakeLogger>();
+            Kernel.Bind<IHelmet>().ToConstant(new Helmet());
             var samurai = Kernel.Get<Samurai>();
 
             var damage = samurai.Hit();
@@ -63,19 +67,31 @@ namespace NinjectDemo
         [Test]
         public void Hit_WithKatana_LogIt()
         {
+            var fakeLogger = new FakeLogger();
             Kernel.Bind<IWeapon>().To<Katana>();
-            Kernel.Bind<ILogger>().To<FakeLogger>();
+            Kernel.Bind<IHelmet>().ToConstant(new Helmet());
+            Kernel.Bind<ILogger>().ToConstant(fakeLogger);
 
-            Mock<ILogger> mockLogger = new Mock<ILogger>();
-            mockLogger.Setup(x => x.Something()).Returns("aaa");
-            Assert.AreEqual("aaa", mockLogger.Object.Something());
-
-            Kernel.Rebind<ILogger>().ToConstant(mockLogger.Object);
             var samurai = Kernel.Get<Samurai>();
 
             var damage = samurai.Hit();
 
-            mockLogger.Verify(x => x.Log(It.IsAny<string>()));
+            Assert.IsTrue(fakeLogger.LogInvoked);
+        }
+
+
+        [Test]
+        public void Hit_WithKatana_LogIt_Moq()
+        {
+            Kernel.Bind<IWeapon>().To<Katana>();
+            Mock<ILogger> mockLogger = new Mock<ILogger>();
+            var logger = mockLogger.Object;
+            Kernel.Rebind<ILogger>().ToConstant(logger);
+            var samurai = Kernel.Get<Samurai>();
+
+            var damage = samurai.Hit();
+
+            mockLogger.Verify(x => x.Log("aaaa"));
             Assert.AreEqual(7, damage);
         }
     }

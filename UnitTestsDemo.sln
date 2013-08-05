@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsDemo", "UnitTestsD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectDemo", "NinjectDemo\NinjectDemo.csproj", "{73DA5493-834F-4EFA-85DC-21E7FD2AE81A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqDemo", "MoqDemo\MoqDemo.csproj", "{45DB3ACC-6D90-449D-A182-EDACB66907E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{73DA5493-834F-4EFA-85DC-21E7FD2AE81A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{73DA5493-834F-4EFA-85DC-21E7FD2AE81A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{73DA5493-834F-4EFA-85DC-21E7FD2AE81A}.Release|x86.ActiveCfg = Release|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{45DB3ACC-6D90-449D-A182-EDACB66907E0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
